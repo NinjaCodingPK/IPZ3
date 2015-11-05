@@ -15,9 +15,9 @@ import java.util.ArrayList;
 public class PhysicalSpace {
     private ArrayList<PhysicalPage> physical_space = new ArrayList<>();
     
-    public PhysicalSpace(int size) {
-        for(int i = 0; i < 10; i++) {
-            physical_space.add(new PhysicalPage(i, size));
+    public PhysicalSpace(int space_size, int page_size) {
+        for(int i = 0; i < space_size/page_size; i++) {
+            physical_space.add(new PhysicalPage(i, page_size));
         }
     }
 
@@ -60,4 +60,6 @@ public class PhysicalSpace {
             System.out.println("Business: " + p.isBusy());
         }
     }
+    
+    
 }

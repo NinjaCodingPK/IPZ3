@@ -19,6 +19,7 @@ public class PhysicalPage {
         this.number = number;
         this.size = size;
         this.busy = false;
+        this.modification = true;
     }
 
     public boolean isModification() {
